@@ -33,7 +33,7 @@ export interface CalculateWealth {
   payload: User[],
 }
 
-export type UserActions = 
+export type UsersActions = 
   | AddUser 
   | DoubleMoney 
   | ShowOnlyMillionaires 
