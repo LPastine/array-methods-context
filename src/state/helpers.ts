@@ -1,3 +1,4 @@
+import { ActionType, AddUser } from "./actions"
 import { User } from "./state"
 import { RandomUser, Result } from "./typings/randomUser"
 
@@ -14,3 +15,8 @@ export const getRandomUser = async (): Promise<User> => {
 
   return newUser
 }
+
+export const addUser = (user: User): AddUser => ({
+  type: ActionType.AddUser,
+  payload: user,
+})

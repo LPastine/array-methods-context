@@ -1,8 +1,12 @@
 import './App.css';
-// import { Poker } from './components';
+import Main from './components/Main';
 
 function App() {
-  return <div className="App">{/* <Main /> */}</div>;
+  return (
+    <div className="App">
+      <Main />
+    </div>
+  );
 }
 
 export default App;
