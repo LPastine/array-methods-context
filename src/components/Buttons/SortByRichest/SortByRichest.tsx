@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import { UsersContext } from '../../state/context';
-import { sortByRichest } from '../../state/helpers';
+import { UsersContext } from '../../../state/context';
+import { sortByRichest } from '../../../state/helpers';
+import { Button } from '../styles';
 
 const SortByRichest = () => {
   const { state, dispatch } = useContext(UsersContext);
@@ -12,7 +13,7 @@ const SortByRichest = () => {
   };
   return (
     <>
-      <button onClick={handleOnClick}>Sort By Richest</button>
+      <Button onClick={handleOnClick}>Sort By Richest</Button>
     </>
   );
 };

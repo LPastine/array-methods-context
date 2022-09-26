@@ -1,7 +1,8 @@
 import { useContext } from 'react';
-import { UsersContext } from '../../state/context';
-import { addUser, getRandomUser } from '../../state/helpers';
-import { User } from '../../state/state';
+import { UsersContext } from '../../../state/context';
+import { addUser, getRandomUser } from '../../../state/helpers';
+import { User } from '../../../state/state';
+import { Button } from '../styles';
 
 const AddUser = () => {
   const { dispatch } = useContext(UsersContext);
@@ -12,7 +13,7 @@ const AddUser = () => {
   };
   return (
     <>
-      <button onClick={handleOnClick}>Add New User</button>
+      <Button onClick={handleOnClick}>Add New User</Button>
     </>
   );
 };

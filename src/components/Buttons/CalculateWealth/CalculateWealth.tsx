@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
-import { UsersContext } from '../../state/context';
+import { UsersContext } from '../../../state/context';
+import { Button } from '../styles';
 
 const formatMoney = (money: number): string => {
   return '$' + money.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
@@ -26,7 +27,7 @@ const CalculateWealth = () => {
   };
   return (
     <>
-      <button onClick={handleOnClick}>Calculate Wealth</button>
+      <Button onClick={handleOnClick}>Calculate Wealth</Button>
       {display && (
         <h3>
           Total Wealth: <strong>{wealth}</strong>

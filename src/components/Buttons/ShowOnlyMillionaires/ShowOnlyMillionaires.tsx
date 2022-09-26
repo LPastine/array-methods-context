@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import { UsersContext } from '../../state/context';
-import { showOnlyMillionaires } from '../../state/helpers';
+import { UsersContext } from '../../../state/context';
+import { showOnlyMillionaires } from '../../../state/helpers';
+import { Button } from '../styles';
 
 const ShowOnlyMillionaires = () => {
   const { state, dispatch } = useContext(UsersContext);
@@ -14,7 +15,7 @@ const ShowOnlyMillionaires = () => {
   };
   return (
     <>
-      <button onClick={handleOnClick}>Show Only Millionaires</button>
+      <Button onClick={handleOnClick}>Show Only Millionaires</Button>
     </>
   );
 };
