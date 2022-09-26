@@ -4,6 +4,8 @@ import { usersReducer } from '../../state/reducer';
 import { initialUsersState } from '../../state/state';
 import AddUser from '../AddUser';
 import DoubleMoney from '../DoubleMoney';
+import ShowOnlyMillionaires from '../ShowOnlyMillionaires';
+import SortByRichest from '../SortByRichest';
 
 const Main = () => {
   const [state, dispatch] = useReducer(usersReducer, initialUsersState);
@@ -18,6 +20,8 @@ const Main = () => {
       </ul>
       <AddUser />
       <DoubleMoney />
+      <SortByRichest />
+      <ShowOnlyMillionaires />
     </UsersContext.Provider>
   );
 };

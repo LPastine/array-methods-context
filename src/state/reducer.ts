@@ -15,6 +15,14 @@ export function usersReducer(state: UsersState, action: UsersActions): UsersStat
       return {
         users: action.payload 
       }
+    case ActionType.SortByRichest:
+      return {
+        users: action.payload 
+      }
+    case ActionType.ShowOnlyMillionaires:
+      return {
+        users: action.payload 
+      }
     default:
       return state
   }

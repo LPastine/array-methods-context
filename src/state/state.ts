@@ -11,15 +11,15 @@ export const initialUsersState: UsersState = {
   users: [
     {
       name: 'Test1',
-      money: 1000000
+      money: 100000
     },
     {
       name: 'Test2',
-      money: 2000000
+      money: 200000
     },
     {
       name: 'Test3',
-      money: 3000000
+      money: 300000
     },
   ],
 }
