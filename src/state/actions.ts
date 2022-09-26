@@ -28,14 +28,8 @@ export interface SortByRichest {
   payload: User[],
 }
 
-export interface CalculateWealth {
-  type: ActionType.CalculateWealth,
-  payload: User[],
-}
-
 export type UsersActions = 
   | AddUser 
   | DoubleMoney 
   | ShowOnlyMillionaires 
   | SortByRichest 
-  | CalculateWealth
