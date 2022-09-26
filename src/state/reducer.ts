@@ -11,6 +11,10 @@ export function usersReducer(state: UsersState, action: UsersActions): UsersStat
           ...state.users
         ]
       }
+    case ActionType.DoubleMoney:
+      return {
+        users: action.payload 
+      }
     default:
       return state
   }

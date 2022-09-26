@@ -3,6 +3,7 @@ import { UsersContext } from '../../state/context';
 import { usersReducer } from '../../state/reducer';
 import { initialUsersState } from '../../state/state';
 import AddUser from '../AddUser';
+import DoubleMoney from '../DoubleMoney';
 
 const Main = () => {
   const [state, dispatch] = useReducer(usersReducer, initialUsersState);
@@ -16,6 +17,7 @@ const Main = () => {
         ))}
       </ul>
       <AddUser />
+      <DoubleMoney />
     </UsersContext.Provider>
   );
 };
