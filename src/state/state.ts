@@ -1,5 +1,6 @@
 export interface UsersState {
   users: User[],
+  totalWealth: number,
 }
 
 export interface User {
@@ -22,4 +23,5 @@ export const initialUsersState: UsersState = {
       money: 300000
     },
   ],
+  totalWealth: 0
 }

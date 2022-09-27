@@ -1,4 +1,4 @@
-import { ActionType, AddUser, DoubleMoney, ShowOnlyMillionaires, SortByRichest } from "./actions"
+import { ActionType, AddUser, CalculateWealth, DoubleMoney, ShowOnlyMillionaires, SortByRichest } from "./actions"
 import { User } from "./state"
 import { RandomUser, Result } from "./typings/randomUser"
 
@@ -34,4 +34,9 @@ export const sortByRichest = (users: User[]): SortByRichest => ({
 export const showOnlyMillionaires = (users: User[]): ShowOnlyMillionaires => ({
   type: ActionType.ShowOnlyMillionaires,
   payload: users,
+})
+
+export const calculateWealth = (totalWealth: number): CalculateWealth => ({
+  type: ActionType.CalculateWealth,
+  payload: totalWealth,
 })

@@ -13,15 +13,23 @@ export function usersReducer(state: UsersState, action: UsersActions): UsersStat
       }
     case ActionType.DoubleMoney:
       return {
+        ...state,
         users: action.payload 
       }
     case ActionType.SortByRichest:
       return {
+        ...state,
         users: action.payload 
       }
     case ActionType.ShowOnlyMillionaires:
       return {
+        ...state,
         users: action.payload 
+      }
+    case ActionType.CalculateWealth:
+      return {
+        ...state,
+        totalWealth: action.payload 
       }
     default:
       return state

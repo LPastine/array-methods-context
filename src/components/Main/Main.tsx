@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { UsersContext } from '../../state/context';
+import Person from '../Person';
+import TotalWealth from '../TotalWealth';
 import { StyledMain, Subtitle } from './styles';
 
 const Main = () => {
@@ -9,13 +11,14 @@ const Main = () => {
       <Subtitle>
         <strong>Person</strong> Wealth
       </Subtitle>
-      <ul>
-        {state.users.map((user, index: number) => (
-          <li key={index}>
-            {user.name} {user.money}
-          </li>
+      <div id="users">
+        {state.users.map((user) => (
+          <Person props={user} />
         ))}
-      </ul>
+      </div>
+      <div id="totalWeatlh">
+        <TotalWealth />
+      </div>
     </StyledMain>
   );
 };

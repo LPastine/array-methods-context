@@ -1,38 +1,22 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { UsersContext } from '../../../state/context';
+import { calculateWealth } from '../../../state/helpers';
 import { Button } from '../styles';
 
-const formatMoney = (money: number): string => {
-  return '$' + money.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-};
-
 const CalculateWealth = () => {
-  const { state } = useContext(UsersContext);
-  const [display, setDisplay] = useState(false);
-  const [wealth, setWealth] = useState('');
+  const { state, dispatch } = useContext(UsersContext);
 
-  useEffect(() => {
-    const totalWealth: number = state.users.reduce(
-      (acc, user) => (acc += user.money),
-      0
-    );
-
-    const formattedWealth: string = formatMoney(totalWealth);
-
-    setWealth(formattedWealth);
-  }, [state]);
+  const totalWealth: number = state.users.reduce(
+    (acc, user) => (acc += user.money),
+    0
+  );
 
   const handleOnClick = () => {
-    setDisplay(true);
+    dispatch(calculateWealth(totalWealth));
   };
   return (
     <>
       <Button onClick={handleOnClick}>Calculate Wealth</Button>
-      {display && (
-        <h3>
-          Total Wealth: <strong>{wealth}</strong>
-        </h3>
-      )}
     </>
   );
 };
